@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
 
 import javax.swing.*;
 
@@ -146,8 +147,14 @@ class VentanaPrincipal extends JFrame{
 	txtApellidos.setBounds(330, 150, 300, 20);
 	add(txtApellidos);
 	//BOTONSUB
+	ImageIcon icon = new ImageIcon("src/imagenes/icono.png");
+	Image image = icon.getImage();
+	image = image.getScaledInstance(40,40,5); 
+	icon = new ImageIcon(image);
 	JButton bttSub = new JButton("Suscribe");
-	bttSub.setBounds(330, 180, 100, 20);
+	bttSub.setIcon(icon);
+	bttSub.setIconTextGap(1);
+	bttSub.setBounds(330, 180, 130, 35);
 	add(bttSub);
 	
 	//CAJATEXTO
